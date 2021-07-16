@@ -1,0 +1,87 @@
+*, ::before, *::after {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+:root {
+    --background-neutral: 200;
+    --background-wrong: 0;
+    --background-correct: 145;
+}
+
+body {
+    --background-color: var(--background-neutral);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--background-color), 100%, 20%)
+    
+}
+
+body.correct {
+    --background-color: var(--background-correct);
+}
+
+body.wrong {
+    --background-color: var(--background-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 5px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --background-color: var(--background-neutral);
+    border: 1px solid hsl(var(--background-color), 100%, 30%);
+    background-color: hsl(var(--background-color) , 100%, 50%);
+    border-radius: 10px ;
+    padding: 5px 10px;
+    color: #fff;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --background-color: var(--background-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --background-color: var(--background-wrong);
+}
+
+.start-btn , .next-btn {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
